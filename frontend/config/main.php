@@ -54,6 +54,7 @@ return [
                     'controller' => 'book',
                     'prefix' => 'api/v1',
                 ],
+                'POST api/v1/register' => 'auth/register',
             ],
         ],
         
