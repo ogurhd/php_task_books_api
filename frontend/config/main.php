@@ -55,6 +55,7 @@ return [
                     'prefix' => 'api/v1',
                 ],
                 'POST api/v1/register' => 'auth/register',
+                'POST api/v1/auth' => 'auth/auth',
             ],
         ],
         
