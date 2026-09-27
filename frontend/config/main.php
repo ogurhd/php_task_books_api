@@ -16,7 +16,13 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
+            'parsers' => [
+                'application/json' => \yii\web\JsonParser::class,
+            ],
             'csrfParam' => '_csrf-frontend',
+        ],
+        'response' => [
+            'format' => \yii\web\Response::FORMAT_JSON,
         ],
         'user' => [
             'identityClass' => \common\models\User::class,
@@ -39,14 +45,14 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
